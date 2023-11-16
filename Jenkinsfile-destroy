@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    environment {
+        AWS_ACCESS_KEY_ID = credentials('aws_access_key')
+        AWS_SECRET_ACCESS_KEY = credentials('aws_secret_key')
+        AWS_DEFAULT_REGION = "ap-south-1"
+    }
+    stages {
+        stage('destroying platform'){
+            steps {
+              dir('/var/lib/jenkins/workspace/terraform_eks')
+              sh 'terraform destroy -auto-approve'
+            }
+        }
+
+        stage('destroying s3 & dynamo db'){
+            steps {
+              dir('/var/lib/jenkins/workspace/terraform_eks')
+              sh 'terraform destroy -auto-approve'
+            }
+        }
+    }
+    
