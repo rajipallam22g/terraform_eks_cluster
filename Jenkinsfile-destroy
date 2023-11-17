@@ -12,12 +12,6 @@ pipeline {
               sh 'terraform destroy -auto-approve'
             }
         }
-
-        stage('destroying s3 & dynamo db'){
-            steps {
-              dir('/var/lib/jenkins/workspace/terraform_eks')
-              sh 'terraform destroy -auto-approve'
-            }
-        }
-    }
+}
+        
     
