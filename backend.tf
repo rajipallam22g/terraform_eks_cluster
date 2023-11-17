@@ -7,8 +7,4 @@ terraform {
     dynamodb_table = "dynamo_db_table"
   }
 }
-terraform {
-  backend "local" {
-    path = "/var/lib/jenkins/s3state/terraform.state"
-  }
-}
+
