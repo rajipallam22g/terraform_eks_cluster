@@ -1,4 +1,4 @@
-provider "aws" {
+/*provider "aws" {
   region = "ap-south-1"  # Change to your desired AWS region
 }
 
@@ -18,3 +18,4 @@ resource "aws_dynamodb_table" "example_table" {
     type = "S"
   }
 }
+*/
