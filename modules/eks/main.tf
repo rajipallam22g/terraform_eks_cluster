@@ -38,6 +38,7 @@ resource "aws_eks_node_group" "onlinetest" {
     aws_iam_role_policy_attachment.onlinetest-AmazonEKSWorkerNodePolicy,
     aws_iam_role_policy_attachment.onlinetest-AmazonEKS_CNI_Policy,
     aws_iam_role_policy_attachment.onlinetest-AmazonEC2ContainerRegistryReadOnly,
+    aws_iam_role_policy_attachment.onlinetest-ebs_csi_driver_policy_attachment,
   ]
 }
 
@@ -132,4 +133,8 @@ resource "aws_iam_role_policy_attachment" "onlinetest-AmazonEKS_CNI_Policy" {
 resource "aws_iam_role_policy_attachment" "onlinetest-AmazonEC2ContainerRegistryReadOnly" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
   role       = aws_iam_role.onlinetest2.name
+}
+resource "aws_iam_role_policy_attachment" "onlinetest-ebs_csi_driver_policy_attachment" {
+  role       = aws_iam_role.onlinetest2.name  # Replace with your IAM role name
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
 }
