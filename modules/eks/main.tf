@@ -13,7 +13,7 @@ resource "aws_eks_cluster" "onlinetest" {
   depends_on = [
     aws_iam_role_policy_attachment.onlinetest-AmazonEKSClusterPolicy,
     aws_iam_role_policy_attachment.onlinetest-AmazonEKSVPCResourceController,
-    aws_iam_role_policy_attachment.onlinetest-AmazonEKS_EBS_CSI_DriverRole,
+    
   ]
 }
 
@@ -39,7 +39,7 @@ resource "aws_eks_node_group" "onlinetest" {
     aws_iam_role_policy_attachment.onlinetest-AmazonEKSWorkerNodePolicy,
     aws_iam_role_policy_attachment.onlinetest-AmazonEKS_CNI_Policy,
     aws_iam_role_policy_attachment.onlinetest-AmazonEC2ContainerRegistryReadOnly,
-    aws_iam_role_policy_attachment.onlinetest-AmazonEKS_EBS_CSI_DriverRole,
+    
   ]
 }
 
@@ -153,7 +153,7 @@ resource "aws_iam_role" "ebs_csi_driver_role" {
   })
 }
 
-resource "aws_iam_role_policy_attachment" "ebs_csi_driver_policy_attachment" {
+resource "aws_iam_role_policy_attachment" "onlinetest-ebs_csi_driver_policy_attachment" {
   role       = aws_iam_role.ebs_csi_driver_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
 }
