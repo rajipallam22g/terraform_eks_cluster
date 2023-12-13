@@ -13,6 +13,7 @@ resource "aws_eks_cluster" "onlinetest" {
   depends_on = [
     aws_iam_role_policy_attachment.onlinetest-AmazonEKSClusterPolicy,
     aws_iam_role_policy_attachment.onlinetest-AmazonEKSVPCResourceController,
+    aws_iam_role_policy_attachment.onlinetest-AmazonEKS_EBS_CSI_DriverRole,
   ]
 }
 
@@ -134,10 +135,7 @@ resource "aws_iam_role_policy_attachment" "onlinetest-AmazonEC2ContainerRegistry
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
   role       = aws_iam_role.onlinetest2.name
 }
-resource "aws_iam_role_policy_attachment" "onlinetest-AmazonEKS_EBS_CSI_DriverRole" {
-  role       = aws_iam_role.onlinetest2.name  # Replace with your IAM role name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
-}
+
 
 resource "aws_iam_role" "ebs_csi_driver_role" {
   name = "AmazonEKS_EBS_CSI_DriverRole"
