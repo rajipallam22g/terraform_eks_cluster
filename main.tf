@@ -12,7 +12,7 @@ module "eks" {
   scaling_max_size        = 2
   scaling_min_size        = 2
   instance_types          = ["t3a.medium"]
-  key_pair                = "AWS"
+  key_pair                = "aws"
 }
 
 module "vpc" {
@@ -23,7 +23,7 @@ module "vpc" {
   access_ip               = "0.0.0.0/0"
   public_sn_count         = 2
   public_cidrs            = ["10.10.1.0/24", "10.10.2.0/24"]
-  az_list                 = ["us-east-1a", "us-east-1b", "us-east-1c"]
+  az_list                 = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
   map_public_ip_on_launch = true
   rt_route_cidr_block     = "0.0.0.0/0"
 
