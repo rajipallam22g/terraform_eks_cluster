@@ -1,3 +1,4 @@
+/*
 terraform {
   backend "s3" {
     bucket         = "mybucketeks_12_15"
@@ -7,4 +8,4 @@ terraform {
     dynamodb_table = "dynamo_db_table"
   }
 }
-
+*/
