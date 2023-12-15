@@ -11,8 +11,8 @@ module "eks" {
   scaling_desired_size    = 2
   scaling_max_size        = 2
   scaling_min_size        = 2
-  instance_types          = ["t3a.xlarge"]
-  key_pair                = "aws"
+  instance_types          = ["t3a.medium"]
+  key_pair                = "AWS"
 }
 
 module "vpc" {
