@@ -1,4 +1,4 @@
-/*
+
 # create s3 bucket
 resource "aws_s3_bucket" "s3_bucket" {
   bucket = "mybucketeks_12_15" # change this
@@ -14,4 +14,4 @@ resource "aws_dynamodb_table" "terraform_lock" {
     type = "S"
   }
 }
-*/
+
