@@ -7,4 +7,5 @@ terraform {
     encrypt        = true
     dynamodb_table = "dynamo_db_table"
   }
+}
 
