@@ -1,7 +1,7 @@
-/*
+
 # create s3 bucket
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "myeksbucket3" # change this
+  bucket = "mybucket3" # change this
 }
 
 resource "aws_dynamodb_table" "terraform_lock" {
@@ -14,4 +14,4 @@ resource "aws_dynamodb_table" "terraform_lock" {
     type = "S"
   }
 }
-*/
+
