@@ -72,7 +72,7 @@ pipeline {
                 script {
                     // Verify kubectl installation
                     sh 'kubectl version --client'
-                    sh 'aws eks --region ap-south-1 update-kubeconfig --name my_eks_cluster'
+                    sh 'aws eks --region ap-southeast-2 update-kubeconfig --name my_eks_cluster'
                 }
             }
         }
