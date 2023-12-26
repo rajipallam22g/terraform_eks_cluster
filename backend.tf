@@ -1,7 +1,7 @@
 
 terraform {
   backend "s3" {
-    bucket         = "mybucket1224"
+    bucket         = "my-bucket-24"
     key            = "eks/terraform.tfstate"
     region         = "ap-southeast-2"
     encrypt        = true
