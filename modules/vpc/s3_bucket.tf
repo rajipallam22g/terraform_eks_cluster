@@ -1,9 +1,9 @@
-/*provider "aws" {
-  region = "ap-south-1"  # Change to your desired AWS region
+provider "aws" {
+  region = "ap-southeast-2"  # Change to your desired AWS region
 }
 
 resource "aws_s3_bucket" "example_bucket" {
-  bucket = "my-unique-s3-bucket-08.11"  # Change to your desired bucket name
+  bucket = "mybucket1224"  # Change to your desired bucket name
 
 }
 
@@ -18,4 +18,4 @@ resource "aws_dynamodb_table" "example_table" {
     type = "S"
   }
 }
-*/
+
