@@ -1,7 +1,7 @@
 
 # create s3 bucket
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "my_aws_eks_b" # 
+  bucket = "myawseksbucket" # 
 }
 
 resource "aws_dynamodb_table" "terraform_lock" {
