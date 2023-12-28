@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('destroying platform'){
             steps {
-              dir('/var/lib/jenkins/workspace/tf_eks_2.0'){
+              dir('/var/lib/jenkins/workspace/online botique'){
               sh 'terraform destroy -auto-approve'
             }
         }
