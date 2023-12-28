@@ -1,7 +1,7 @@
 
 terraform {
   backend "s3" {
-    bucket         = "my_aws_eks_b"
+    bucket         = "myawseksbucket"
     key            = "eks/terraform.tfstate"
     region         = "ap-southeast-2"
     encrypt        = true
