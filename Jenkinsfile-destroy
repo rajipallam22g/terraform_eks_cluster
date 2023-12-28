@@ -1,4 +1,4 @@
-/*
+
 pipeline {
     agent any
     environment {
@@ -9,12 +9,12 @@ pipeline {
     stages {
         stage('destroying platform'){
             steps {
-              dir('/var/lib/jenkins/workspace/online botique'){
+              dir('/var/lib/jenkins/workspace/online botiques'){
               sh 'terraform destroy -auto-approve'
             }
         }
 }
    }
 }
-*/
+
     
